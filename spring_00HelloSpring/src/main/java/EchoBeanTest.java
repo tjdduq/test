@@ -29,7 +29,7 @@ public class EchoBeanTest {
 		System.out.println(bean5==bean4);
 		BoardService ser = ctx.getBean("service",BoardService.class);
 		System.out.println(ser.getData());
-		
+		String aa;
 	}
 
 }
