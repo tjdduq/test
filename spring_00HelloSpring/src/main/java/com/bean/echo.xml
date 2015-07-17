@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- echoBean 등록 -->
+	<bean id="echo" class="com.bean.EchoBean">
+		<constructor-arg value="10" />
+	</bean>
+	<bean id="echo2" class="com.bean.EchoBean">
+		<constructor-arg name="name" value="홍길동" />
+		<constructor-arg name="num" value="10" />
+	</bean>
+	<bean id="echo3" class="com.bean.EchoBean">
+		<property name="name" value="ㅎㅎㅎ"></property>
+		<property name="num" value="100"></property>
+	</bean>
+	<!-- <bean id="echo" class="com.bean.EchoBean" scope="prototype">
+		<property name="name" value="ㅎㅎㅎ"></property>
+		<property name="num" value="100"></property>
+	</bean> -->
+	<bean id="x" class="com.bean.BoardDAO">
+	</bean>
+	<bean id="y" class="com.bean.MemberDAO">
+	</bean>
+	<bean id="service" class="com.bean.BoardService">
+		<property name="dao" ref="y"></property>
+	</bean>
+	
+	
+	
+
+</beans>
